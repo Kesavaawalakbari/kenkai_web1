@@ -2,10 +2,110 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Kenkai</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* Warna tema Kenkai */
+    :root {
+      --primary-blue: #1E90FF;
+      --secondary-blue: #87CEFA;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--secondary-blue);
+      color: var(--primary-blue);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 20px 0;
+    }
+
+    nav a {
+      color: var(--white);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    button {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #104e8b;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Halo, ini website pertamaku!</h1>
-  <p>Ini adalah halaman HTML sederhana.</p>
+
+  <header>
+    <h1>Website Kenkai</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Halo, ini website pertamaku!</h1>
+    <p>Ini adalah halaman HTML sederhana dengan desain biru-putih ala Kenkai.</p>
+    <button onclick="alert('Selamat datang di Website Kenkai!')">Klik Saya</button>
+    <br>
+    <img src="kenkai-logo.png" alt="Logo Kenkai">
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kenkai. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

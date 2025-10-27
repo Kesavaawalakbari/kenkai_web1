@@ -4,43 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Kenkai</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    /* ===== CSS gabungan ===== */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff; /* biru muda */
-      color: #1e90ff; /* biru Kenkai */
-      text-align: center;
+    /* ===== Tema Kenkai ===== */
+    :root {
+      --primary-blue: #1E90FF;
+      --secondary-blue: #87CEFA;
+      --white: #ffffff;
+      --hover-blue: #104e8b;
+    }
+
+    /* ===== Reset & Body ===== */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--secondary-blue);
+      color: var(--primary-blue);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* ===== Header & Navigasi ===== */
+    header {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: var(--white);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary-blue);
+    }
+
+    /* ===== Main Content ===== */
+    main {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #1e90ff;
-      color: white;
+      background-color: var(--primary-blue);
+      color: var(--white);
       border: none;
-      border-radius: 5px;
+      padding: 15px 30px;
+      font-size: 1.1em;
       cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     button:hover {
-      background-color: #0f71c0;
+      background-color: var(--hover-blue);
+      transform: scale(1.05);
+    }
+
+    img {
+      margin-top: 30px;
+      width: 220px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width: 600px){
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      button { padding: 12px 25px; font-size: 1em; }
+      nav a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
 <body>
 
-  <h1>Halo, ini website pertamaku!</h1>
-  <button id="clickMe">Klik Saya</button>
+  <header>
+    <h1>Website Kenkai</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Halo, ini website pertamaku!</h1>
+    <p>Selamat datang di halaman Kenkai dengan desain modern, interaktif, dan ramah pengguna.</p>
+    <button id="clickMe">Klik Saya</button>
+    <br>
+    <img src="https://via.placeholder.com/220x220.png?text=Logo+Kenkai" alt="Logo Kenkai">
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kenkai. All rights reserved.</p>
+  </footer>
 
   <script>
-    // ===== JS gabungan =====
+    // ===== JavaScript Interaktif =====
     const button = document.getElementById('clickMe');
 
     button.addEventListener('click', () => {
-      alert('Halo! Kamu baru saja klik tombol.');
+      alert('Halo! Kamu baru saja klik tombol Kenkai.');
     });
   </script>
+
 </body>
 </html>

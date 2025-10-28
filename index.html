@@ -6,26 +6,35 @@
   <title>Website Kenkai</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    /* Warna tema Kenkai */
+    /* ===== Tema Kenkai ===== */
     :root {
       --primary-blue: #1E90FF;
       --secondary-blue: #87CEFA;
       --white: #ffffff;
+      --hover-blue: #104e8b;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--secondary-blue);
-      color: var(--primary-blue);
-      text-align: center;
+    /* ===== Reset & Body ===== */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--secondary-blue);
+      color: var(--primary-blue);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* ===== Header & Navigasi ===== */
     header {
       background-color: var(--primary-blue);
       color: var(--white);
       padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     nav a {
@@ -33,14 +42,18 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--secondary-blue);
     }
 
+    /* ===== Main Content ===== */
     main {
-      padding: 50px 20px;
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
     h1 {
@@ -50,37 +63,52 @@
 
     p {
       font-size: 1.2em;
+      margin-bottom: 30px;
     }
 
     button {
       background-color: var(--primary-blue);
       color: var(--white);
       border: none;
-      padding: 12px 25px;
-      font-size: 1em;
+      padding: 15px 30px;
+      font-size: 1.1em;
       cursor: pointer;
-      border-radius: 5px;
-      margin-top: 20px;
-      transition: background-color 0.3s;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     button:hover {
-      background-color: #104e8b;
+      background-color: var(--hover-blue);
+      transform: scale(1.05);
     }
 
     img {
-      margin-top: 20px;
-      width: 200px;
-      border-radius: 10px;
+      margin-top: 30px;
+      width: 220px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ===== Footer ===== */
     footer {
       background-color: var(--primary-blue);
       color: var(--white);
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width: 600px){
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      button { padding: 12px 25px; font-size: 1em; }
+      nav a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
@@ -89,23 +117,32 @@
   <header>
     <h1>Website Kenkai</h1>
     <nav>
-      <a href="index.html">Beranda</a>
-      <a href="about.html">Tentang</a>
-      <a href="contact.html">Kontak</a>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
     </nav>
   </header>
 
   <main>
     <h1>Halo, ini website pertamaku!</h1>
-    <p>Ini adalah halaman HTML sederhana dengan desain biru-putih ala Kenkai.</p>
-    <button onclick="alert('Selamat datang di Website Kenkai!')">Klik Saya</button>
+    <p>Selamat datang di halaman Kenkai dengan desain modern, interaktif, dan ramah pengguna.</p>
+    <button id="clickMe">Klik Saya</button>
     <br>
-    <img src="kenkai-logo.png" alt="Logo Kenkai">
+    <img src="https://via.placeholder.com/220x220.png?text=Logo+Kenkai" alt="Logo Kenkai">
   </main>
 
   <footer>
     <p>&copy; 2025 Kenkai. All rights reserved.</p>
   </footer>
+
+  <script>
+    // ===== JavaScript Interaktif =====
+    const button = document.getElementById('clickMe');
+
+    button.addEventListener('click', () => {
+      alert('Halo! Kamu baru saja klik tombol Kenkai.');
+    });
+  </script>
 
 </body>
 </html>
